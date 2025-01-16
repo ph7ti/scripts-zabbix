@@ -12,7 +12,7 @@ if [ -z $1 ]; then
     exit 1
 fi
 
-Scan=$(nmap -Pn --open -n $1)
+Scan=$(nmap -sS -\p- -Pn $1)
 
 OldIFS=$IFS
 IFS="
